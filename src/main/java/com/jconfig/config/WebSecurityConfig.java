@@ -51,7 +51,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter{
                 .permitAll()
                 .and()
                 .authorizeRequests()
-                .antMatchers("/login","/oauth/token").permitAll()
+                .antMatchers("/login","/oauth/token","/oauth/authorize").permitAll()
                 .antMatchers("/home/**").hasAnyRole("ADMIN","USER")
                 .antMatchers("/admin/**").hasRole("ADMIN")
                 //登录后可访问

@@ -49,6 +49,7 @@ public class MyClientDetailsService implements ClientDetailsService{
         } else {
             List<String> authorizedGrantTypes = new ArrayList<String>();
             List<String> scopeGrantTypes = new ArrayList<String>();
+            authorizedGrantTypes.add("authorization_code");
             authorizedGrantTypes.add("password");
             authorizedGrantTypes.add("refresh_token");
             authorizedGrantTypes.add("client_credentials");

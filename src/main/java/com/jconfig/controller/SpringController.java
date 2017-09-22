@@ -36,6 +36,12 @@ public class SpringController {
         throw new RuntimeException(msg + ":异常");
     }
 
+    @RequestMapping(value = "/auth",method = RequestMethod.GET)
+    public String auth(String code,String state,Model model) {
+        model.addAttribute("code",code);
+        return "code";
+    }
+
     @Scheduled(fixedRate = 5000)
     public void exeTask() {
         System.out.println("执行任务");
